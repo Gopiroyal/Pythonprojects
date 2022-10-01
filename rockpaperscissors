@@ -1,0 +1,61 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+mychoice = int(input("what do you choose? Type 0 for rock, 1 for paper or 2 for scissors."))
+print(mychoice)
+if mychoice == 0:
+    print(rock)
+elif mychoice == 1:
+  print(paper)
+elif mychoice == 2:
+  print(scissors)
+random_choice = random.randint(0,2)
+if mychoice <=2:
+  
+ if random_choice == 0 and  mychoice == 0:
+  print("Computer chose:"+rock  + "Match tie")
+ elif random_choice == 0 and mychoice == 1:
+  print("Computer chose:"+rock  + "You won")
+ elif random_choice == 0 and mychoice == 2:
+  print ("computer chose:" + rock  + "You lost")
+ elif random_choice == 1 and mychoice == 0:
+  print ("Computer chose:" + paper  + "You won")
+ elif random_choice == 1 and mychoice == 1:
+  print ("Computer chose:" + paper  + "Match tie")
+ elif random_choice == 1 and mychoice == 2:
+  print ("Computer chose:" + paper  + "You won")
+ elif random_choice == 2 and mychoice == 0:
+  print ("Computer chose:" + scissors  + "You won")
+ elif random_choice == 2 and mychoice == 1:
+  print ("Computer chose:" + scissors  + "You lost")
+ elif random_choice == 2 and mychoice == 2:
+  print ("Computer chose:" + scissors  + "Match tie")
+else:
+  print("Please choose any number between 0 to 1")  
+  
